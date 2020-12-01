@@ -15,7 +15,7 @@ object ONP extends App {
   println(s"ONP: ${onpTokens.mkString(" ")}")
   println(s"Evaluated value: $calculatedValue")
 
-  def calculate(tokens: List[String]) = {
+  private def calculate(tokens: List[String]) = {
     val stack = new mutable.Stack[Double]()
     tokens.foreach {
       case "+" =>
